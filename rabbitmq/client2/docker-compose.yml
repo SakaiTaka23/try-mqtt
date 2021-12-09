@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  broker:
+   image: eclipse-mosquitto:2.0.14
+   ports:
+    - 1885:1885
+   volumes:
+    - ./config:/mosquitto/config
+    - ./data:/mosquitto/data
+    - ./log:/mosquitto/log
