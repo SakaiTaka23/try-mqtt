@@ -8,3 +8,9 @@ services:
     - ./config:/mosquitto/config
     - ./data:/mosquitto/data
     - ./log:/mosquitto/log
+  pub:
+    build:
+      context: 'pub'
+    tty: true
+    volumes:
+      - ./pub:/src
